@@ -1,0 +1,10 @@
+SQLLDR.EXE student@student/student control='Pliki_ctl\miasto_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\adres_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\salon_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\stanowisko_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\pracownik_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\klient_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\typ_zabiegu_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\zabieg_wymiar.ctl'
+SQLLDR.EXE student@student/student control='Pliki_ctl\wizyta_fakt.ctl'
+pause;
