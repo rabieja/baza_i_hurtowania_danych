@@ -1,0 +1,3 @@
+SELECT DISTINCT wizyta_fakt.id_klient,zabieg_wymiar.nazwa AS nazwa_zabiegu,pracownik_wymiar.id_pracownik,
+ROUND((100*COUNT(pracownik_wymiar.id_pracownik) OVER (PARTITION BY wizyta_fakt.id_klient,zabieg_wymiar.nazwa,pracownik_wymiar.id_pracownik)/Count(pracownik_wymiar.id_pracownik)
+OVER (PARTITION BY wizyta_fakt.id_klient,zabieg_wymiar.nazwa)),2) "procent" FROM wizyta_fakt,zabieg_wymiar,pracownik_wymiar WHERE wizyta_fakt.id_zabieg = zabieg_wymiar.id_zabieg AND wizyta_fakt.id_pracownik = pracownik_wymiar.id_pracownik

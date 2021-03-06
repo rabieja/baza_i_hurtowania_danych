@@ -1,0 +1,3 @@
+SELECT DISTINCT salon_wymiar.id_salon,pracownik_wymiar.id_pracownik,stanowisko_wymiar.nazwa_stanowiska,
+ROUND((100*COUNT(stanowisko_wymiar.nazwa_stanowiska) OVER (PARTITION BY salon_wymiar.id_salon,pracownik_wymiar.id_pracownik,stanowisko_wymiar.nazwa_stanowiska)/Count(stanowisko_wymiar.nazwa_stanowiska)
+OVER (PARTITION BY salon_wymiar.id_salon,pracownik_wymiar.id_pracownik)),2) "procent" FROM salon_wymiar,stanowisko_wymiar,pracownik_wymiar WHERE salon_wymiar.id_salon = pracownik_wymiar.id_salon AND pracownik_wymiar.id_stanowisko = stanowisko_wymiar.id_stanowisko
